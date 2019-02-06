@@ -1,7 +1,7 @@
 {
-    "name": "mvrhov/phinx-bundle",
+    "name": "umanit/phinx-bundle",
     "type": "symfony-bundle",
-    "description": "mvrhov phinx bundle",
+    "description": "umanit phinx bundle",
     "keywords": ["Phinx bundle"],
     "license": "MIT",
     "autoload": {
