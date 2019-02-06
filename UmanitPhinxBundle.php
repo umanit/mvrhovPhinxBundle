@@ -22,10 +22,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace mvrhov\PhinxBundle;
+namespace Umanit\PhinxBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class mvrhovPhinxBundle extends Bundle
+class UmanitPhinxBundle extends Bundle
 {
 }

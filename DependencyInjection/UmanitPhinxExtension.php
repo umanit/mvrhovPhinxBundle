@@ -22,7 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace mvrhov\PhinxBundle\DependencyInjection;
+namespace Umanit\PhinxBundle\DependencyInjection;
 
 use Phinx\Config\Config;
 use Symfony\Component\Config\FileLocator;
@@ -35,7 +35,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class mvrhovPhinxExtension extends Extension
+class UmanitPhinxExtension extends Extension
 {
     /**
      * {@inheritdoc}

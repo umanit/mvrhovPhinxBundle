@@ -5,23 +5,23 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="mvrhov_phinx.command.breakpoint_command" class="mvrhov\PhinxBundle\Command\BreakpointCommand">
+        <service id="umanit_phinx.command.breakpoint_command" class="Umanit\PhinxBundle\Command\BreakpointCommand">
             <tag name="console.command" command="phinx:breakpoint" />
         </service>
 
-        <service id="mvrhov_phinx.command.create_command" class="mvrhov\PhinxBundle\Command\CreateCommand">
+        <service id="umanit_phinx.command.create_command" class="Umanit\PhinxBundle\Command\CreateCommand">
             <tag name="console.command" command="phinx:create" />
         </service>
 
-        <service id="mvrhov_phinx.command.migrate_command" class="mvrhov\PhinxBundle\Command\MigrateCommand">
+        <service id="umanit_phinx.command.migrate_command" class="Umanit\PhinxBundle\Command\MigrateCommand">
             <tag name="console.command" command="phinx:migrate" />
         </service>
 
-        <service id="mvrhov_phinx.command.rollback_command" class="mvrhov\PhinxBundle\Command\RollbackCommand">
+        <service id="umanit_phinx.command.rollback_command" class="Umanit\PhinxBundle\Command\RollbackCommand">
             <tag name="console.command" command="phinx:rollback" />
         </service>
 
-        <service id="mvrhov_phinx.command.status_command" class="mvrhov\PhinxBundle\Command\StatusCommand">
+        <service id="umanit_phinx.command.status_command" class="Umanit\PhinxBundle\Command\StatusCommand">
             <tag name="console.command" command="phinx:status" />
         </service>
     </services>

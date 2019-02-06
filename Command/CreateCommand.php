@@ -22,7 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace mvrhov\PhinxBundle\Command;
+namespace Umanit\PhinxBundle\Command;
 
 use Phinx\Config\NamespaceAwareInterface;
 use Phinx\Console\Command\AbstractCommand;

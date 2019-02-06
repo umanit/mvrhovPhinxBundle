@@ -11,7 +11,7 @@ The fastest way to install Phinx bundle is to add it to your project using Compo
 1. Require Phinx bundle as a dependency using Composer:
 
     ```
-    php composer.phar require mvrhov/phinx-bundle
+    php composer.phar require umanit/phinx-bundle
     ```
 
 1. Install bundle:
@@ -28,7 +28,7 @@ The fastest way to install Phinx bundle is to add it to your project using Compo
 
             if ('dev' === $this->getEnvironment()) {
                 // ...
-                $bundles[] = new \mvrhov\PhinxBundle\mvrhovPhinxBundle();
+                $bundles[] = new \Umanit\PhinxBundle\UmanitPhinxBundle();
             }
         }
     ```
@@ -37,7 +37,7 @@ The fastest way to install Phinx bundle is to add it to your project using Compo
    Example:
    
    ```yml
-   mvrhov_phinx:
+   umanit_phinx:
        adapters:
            mysql: Phinx\Db\Adapter\MysqlAdapter
        environment:
