@@ -10,13 +10,13 @@
         }
     },
     "require": {
-        "php": ">=5.5",
-        "robmorgan/phinx": "^0.8|^0.9|^0.10"
+        "php": "^7.1",
+        "robmorgan/phinx": "^0.10|^0.11",
+        "symfony/framework-bundle": "^4.3"
     },
-    "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-            "dev-master": "0.9-dev"
+            "dev-master": "1.0.x-dev"
         }
     }
 }
