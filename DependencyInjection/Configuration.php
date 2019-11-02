@@ -37,12 +37,11 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritdoc}
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('umanit_phinx');
+        $treeBuilder = new TreeBuilder('umanit_phinx');
 
-        $rootNode
+        $treeBuilder->getRootNode()
             ->children()
                 ->scalarNode('migration_base_class')->info('Replace default migration class')->end()
                 ->arrayNode('adapters')
@@ -64,30 +63,10 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('table_suffix')->end()
                         ->scalarNode('migration_table')->end()
                         ->arrayNode('connection')
-                            ->addDefaultsIfNotSet()
-                            ->beforeNormalization()
-                                ->always()
-                                ->then(function ($v) {
-                                    //remap password into pass
-                                    if (isset($v['password'])) {
-                                        $v['pass'] = $v['password'];
-                                        unset($v['password']);
-                                    }
-                                    return $v;
-                                })
-                            ->end()
                             ->children()
-                                ->scalarNode('adapter')->end()
-                                ->scalarNode('name')->end()
-                                ->scalarNode('host')->defaultValue('localhost')->end()
-                                ->scalarNode('port')->defaultNull()->end()
-                                ->scalarNode('user')->end()
-                                ->scalarNode('pass')->defaultNull()->end()
-                                ->scalarNode('password')->defaultNull()->end()
-                                ->scalarNode('charset')->end()
-                                ->scalarNode('collation')->end()
-                                ->booleanNode('memory')->info('Sqlite database should be in memory only')->end()
-                                ->scalarNode('unix_socket')->info('The unix socket to use for MySQL')->end()
+                                ->scalarNode('dsn')
+                                    ->isRequired()
+                                ->end()
                             ->end()
                         ->end()
                     ->end()
