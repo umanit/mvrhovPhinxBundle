@@ -20,34 +20,24 @@ The fastest way to install Phinx bundle is to add it to your project using Compo
     php composer.phar install
     ```
     
-2. Add bundle to `app/AppKernel.php`
+1. Add bundle to `config/bundles.php`
 
     ```php
-        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
-            // ...
-
-            if ('dev' === $this->getEnvironment()) {
-                // ...
-                $bundles[] = new \Umanit\PhinxBundle\UmanitPhinxBundle();
-            }
-        }
+    return [
+        // [...]
+        Umanit\PhinxBundle\UmanitPhinxBundle::class => ['all' => true],
+    ];
     ```
     
-3. Add bundle config to `app/config/config_dev.yml`
+1. Add bundle config to `config/packages/umanit_phinx.yml`
+
    Example:
-   
-   ```yml
+
+   ```yaml
    umanit_phinx:
-       adapters:
-           mysql: Phinx\Db\Adapter\MysqlAdapter
        environment:
-           connection:        
-               adapter: mysql
-               host: '%database_host%'
-               port: '%database_port%'
-               name: '%database_name%'
-               user: '%database_user%'
-               pass: '%database_password%'
-               charset: UTF8
+           connection:
+               dsn: 'mysql://db_user:db_password@127.0.0.1:3306/db_name'
    ```
+
    See `DependencyInjection/Configuration.php` for full list of available options.
