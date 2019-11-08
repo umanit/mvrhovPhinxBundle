@@ -22,6 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 namespace Umanit\PhinxBundle\Command;
 
 use Phinx\Console\Command\AbstractCommand;
@@ -36,15 +37,31 @@ class RollbackCommand extends AbstractCommand
     /**
      * {@inheritdoc}
      */
-    protected function configure()
+    protected function configure(): void
     {
-        $this->setName('phinx:rollback')
+        $this
+            ->setName('phinx:rollback')
             ->setDescription('Rollback the last or to a specific migration')
-            ->addOption('--target', '-t', InputOption::VALUE_REQUIRED, 'The version number to rollback to')
-            ->addOption('--date', '-d', InputOption::VALUE_REQUIRED, 'The date to rollback to')
-            ->addOption('--force', '-f', InputOption::VALUE_NONE, 'Force rollback to ignore breakpoints')
+            ->addOption(
+                '--target',
+                '-t',
+                InputOption::VALUE_REQUIRED,
+                'The version number to rollback to'
+            )
+            ->addOption(
+                '--date',
+                '-d',
+                InputOption::VALUE_REQUIRED,
+                'The date to rollback to'
+            )
+            ->addOption(
+                '--force',
+                '-f',
+                InputOption::VALUE_NONE,
+                'Force rollback to ignore breakpoints'
+            )
             ->setHelp(
-<<<EOT
+                <<<EOT
 The <info>rollback</info> command reverts the last migration, or optionally up to a specific version
 
 <info>phinx rollback</info>
@@ -57,7 +74,8 @@ If you have a breakpoint set, then you can rollback to target 0 and the rollback
 <info>phinx rollback -t 0 </info>
 
 EOT
-            );
+            )
+        ;
     }
 
     /**
@@ -67,27 +85,15 @@ EOT
      * @param OutputInterface $output
      *
      * @return void
+     * @throws \Exception
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): void
     {
         $this->initialize($input, $output);
 
         $version = $input->getOption('target');
-        $date = $input->getOption('date');
-        $force = !!$input->getOption('force');
-
-        $envOptions = $this->getConfig()->getEnvironment('default');
-        if (isset($envOptions['adapter'])) {
-            $output->writeln('<info>using adapter</info> ' . $envOptions['adapter']);
-        }
-
-        if (isset($envOptions['wrapper'])) {
-            $output->writeln('<info>using wrapper</info> ' . $envOptions['wrapper']);
-        }
-
-        if (isset($envOptions['name'])) {
-            $output->writeln('<info>using database</info> ' . $envOptions['name']);
-        }
+        $date    = $input->getOption('date');
+        $force   = (bool) $input->getOption('force');
 
         // rollback the specified environment
         $start = microtime(true);
@@ -99,6 +105,6 @@ EOT
         $end = microtime(true);
 
         $output->writeln('');
-        $output->writeln('<comment>All Done. Took ' . sprintf('%.4fs', $end - $start) . '</comment>');
+        $output->writeln('<comment>All Done. Took '.sprintf('%.4fs', $end - $start).'</comment>');
     }
 }

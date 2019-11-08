@@ -22,6 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 namespace Umanit\PhinxBundle\DependencyInjection;
 
 use Phinx\Config\Config;
@@ -40,12 +41,11 @@ class UmanitPhinxExtension extends Extension
     /**
      * {@inheritdoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
-        $config = $this->processConfiguration($configuration, $configs);
-
-        $options = [];
+        $config        = $this->processConfiguration($configuration, $configs);
+        $options       = [];
 
         if (isset($config['paths'])) {
             $options['paths'] = $config['paths'];
@@ -80,5 +80,4 @@ class UmanitPhinxExtension extends Extension
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('console.xml');
     }
-
 }
