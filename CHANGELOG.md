@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1] - 2019-11-08
+### Fixed
+- Cannot migrate due to wrong requirement of a name in configuration.
+
 ## [v1.0] - 2019-11-02
 ### Added
 - Add a new `umanit_phinx.environment.connection.dsn` parameter.
@@ -28,4 +32,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix BC break with Symfony < 4.
 
 [v1.0]: https://github.com/umanit/phinx-bundle/compare/v0.10...v1.0
-[Unreleased]: https://github.com/umanit/phinx-bundle/compare/v1.0...master
+[v1.1]: https://github.com/umanit/phinx-bundle/compare/v1.0...v1.1
+[Unreleased]: https://github.com/umanit/phinx-bundle/compare/v1.1...master
