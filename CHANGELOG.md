@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
+- Change type of declaration for :
+    - Command/BreakpointCommand.php
+    - Command/CreateCommand.php
+    - Command/MigrateCommand.php
+    - Command/RollbackCommand.php
+    - Command/StatusCommand.php
+
+### Changed
 - Add support for PHP version 8.0
 - Default value of `umanit_phinx.paths.migrations` and `umanit_phinx.paths.seeds`
 
