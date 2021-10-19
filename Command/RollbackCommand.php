@@ -87,7 +87,7 @@ EOT
      * @return void
      * @throws \Exception
      */
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->initialize($input, $output);
 
@@ -106,5 +106,7 @@ EOT
 
         $output->writeln('');
         $output->writeln('<comment>All Done. Took '.sprintf('%.4fs', $end - $start).'</comment>');
+
+        return self::CODE_SUCCESS;
     }
 }

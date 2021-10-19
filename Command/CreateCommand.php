@@ -90,9 +90,9 @@ class CreateCommand extends AbstractCommand
      *
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
-     * @return void
+     * @return int
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output):int
     {
         $this->initialize($input, $output);
 
@@ -277,5 +277,7 @@ class CreateCommand extends AbstractCommand
         }
 
         $output->writeln('<info>created</info> ' . ltrim(str_replace(getcwd(), '', $filePath), '/'));
+
+        return self::CODE_SUCCESS;
     }
 }
