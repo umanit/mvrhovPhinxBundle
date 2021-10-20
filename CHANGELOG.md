@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Add support for PHP version 8.0
+- Add support for PHP version ^8.0
+- Add support for Symfony version ^5.0
 - Default value of `umanit_phinx.paths.migrations` and `umanit_phinx.paths.seeds`
 - Type of declaration and return value for :
     - Command/BreakpointCommand.php
