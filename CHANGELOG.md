@@ -16,9 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Command/RollbackCommand.php
     - Command/StatusCommand.php
 
-### Removed
-- Drop support for old symfony version; ^4.4 is now required.
-
 ## [v1.1] - 2019-11-08
 ### Fixed
 - Cannot migrate due to wrong requirement of a name in configuration.
