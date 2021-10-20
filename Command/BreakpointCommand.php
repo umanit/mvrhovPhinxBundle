@@ -80,6 +80,7 @@ EOT
             // Toggle the breakpoint.
             $this->getManager()->toggleBreakpoint('default', $version);
         }
+        
         return self::CODE_SUCCESS;
     }
 }
