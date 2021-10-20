@@ -60,9 +60,9 @@ EOT
      *
      * @param InputInterface $input
      * @param OutputInterface $output
-     * @return void
+     * @return int
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output):int
     {
         $this->initialize($input, $output);
 
@@ -80,5 +80,7 @@ EOT
             // Toggle the breakpoint.
             $this->getManager()->toggleBreakpoint('default', $version);
         }
+        
+        return self::CODE_SUCCESS;
     }
 }

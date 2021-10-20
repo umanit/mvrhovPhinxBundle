@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Add support for PHP version ^8.0.
+- Add support for Symfony version ^5.0.
+- Default value of `umanit_phinx.paths.migrations` and `umanit_phinx.paths.seeds`.
+- Type of declaration and return value for :
+    - Command/BreakpointCommand.php
+    - Command/CreateCommand.php
+    - Command/MigrateCommand.php
+    - Command/RollbackCommand.php
+    - Command/StatusCommand.php
+
+### Removed
+- Drop support for old symfony version; ^4.4 IS now required.
+
 ## [v1.1] - 2019-11-08
 ### Fixed
 - Cannot migrate due to wrong requirement of a name in configuration.

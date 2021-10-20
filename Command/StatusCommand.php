@@ -64,7 +64,7 @@ EOT
      *
      * @return integer 0 if all migrations are up, or an error code
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output):int
     {
         $this->initialize($input, $output);
 
@@ -75,6 +75,8 @@ EOT
         }
 
         // print the status
-        return $this->getManager()->printStatus('default', $format);
+        $this->getManager()->printStatus('default', $format);
+
+        return self::CODE_SUCCESS;
     }
 }
