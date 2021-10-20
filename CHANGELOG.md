@@ -6,19 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-10-20
 ### Changed
-- Add support for PHP version ^8.0.
-- Add support for Symfony version ^5.0.
+- Add support for PHP version `^8.0`.
+- Add support for Symfony version `^5.0`.
 - Default value of `umanit_phinx.paths.migrations` and `umanit_phinx.paths.seeds`.
 - Type of declaration and return value for :
-    - Command/BreakpointCommand.php
-    - Command/CreateCommand.php
-    - Command/MigrateCommand.php
-    - Command/RollbackCommand.php
-    - Command/StatusCommand.php
+    - `Command/BreakpointCommand.php`
+    - `Command/CreateCommand.php`
+    - `Command/MigrateCommand.php`
+    - `Command/RollbackCommand.php`
+    - `Command/StatusCommand.php`
 
 ### Removed
-- Drop support for old symfony version; ^4.4 IS now required.
+- Drop support for old symfony version; `^4.4` is now required.
 
 ## [v1.1] - 2019-11-08
 ### Fixed
@@ -47,4 +48,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [v1.0]: https://github.com/umanit/phinx-bundle/compare/v0.10...v1.0
 [v1.1]: https://github.com/umanit/phinx-bundle/compare/v1.0...v1.1
-[Unreleased]: https://github.com/umanit/phinx-bundle/compare/v1.1...master
+[v2.0]: https://github.com/umanit/phinx-bundle/compare/v1.1...2.0.0
+[Unreleased]: https://github.com/umanit/phinx-bundle/compare/2.0.0...master
