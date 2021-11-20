@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2021-11-20
+### Fixed
+- Remove deprecated usage of `%kernel.root_dir%`
+- Fix the documentation about how to configure the bundle
+
 ## [2.0.0] - 2021-10-20
 ### Changed
 - Add support for PHP version `^8.0`.
@@ -48,5 +53,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [v1.0]: https://github.com/umanit/phinx-bundle/compare/v0.10...v1.0
 [v1.1]: https://github.com/umanit/phinx-bundle/compare/v1.0...v1.1
-[v2.0]: https://github.com/umanit/phinx-bundle/compare/v1.1...2.0.0
-[Unreleased]: https://github.com/umanit/phinx-bundle/compare/2.0.0...master
+[2.0.0]: https://github.com/umanit/phinx-bundle/compare/v1.1...2.0.0
+[2.0.1]: https://github.com/umanit/phinx-bundle/compare/2.0.0...2.0.1
+[Unreleased]: https://github.com/umanit/phinx-bundle/compare/2.0.1...master
