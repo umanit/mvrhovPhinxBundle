@@ -45,6 +45,7 @@ class UmanitPhinxExtension extends Extension
     {
         $configuration = new Configuration();
         $config        = $this->processConfiguration($configuration, $configs);
+        $config        = $container->resolveEnvPlaceholders($config, true);
         $options       = [];
 
         if (isset($config['paths'])) {
