@@ -29,7 +29,7 @@ The fastest way to install Phinx bundle is to add it to your project using Compo
     ];
     ```
     
-1. Add bundle config to `config/packages/umanit_phinx.yml`
+1. Add bundle config to `config/packages/umanit_phinx.yaml`
 
    Example:
 
