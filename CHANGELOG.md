@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.2] - 2021-11-21
+### Fixed
+- Resolve env placeholders when processing configuration
+
 ## [2.0.1] - 2021-11-20
 ### Fixed
 - Remove deprecated usage of `%kernel.root_dir%`
@@ -55,4 +59,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.1]: https://github.com/umanit/phinx-bundle/compare/v1.0...v1.1
 [2.0.0]: https://github.com/umanit/phinx-bundle/compare/v1.1...2.0.0
 [2.0.1]: https://github.com/umanit/phinx-bundle/compare/2.0.0...2.0.1
-[Unreleased]: https://github.com/umanit/phinx-bundle/compare/2.0.1...master
+[2.0.2]: https://github.com/umanit/phinx-bundle/compare/2.0.1...2.0.2
+[Unreleased]: https://github.com/umanit/phinx-bundle/compare/2.0.2...master
