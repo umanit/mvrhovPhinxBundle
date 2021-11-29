@@ -42,6 +42,7 @@ class SeedRunCommand extends AbstractCommand
     {
         $this
             ->setName('phinx:seed:run')
+            ->setAliases(['p:s:r'])
             ->setDescription('Seed the database')
             ->addOption(
                 '--seed',

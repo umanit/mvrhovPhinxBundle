@@ -47,6 +47,7 @@ class SeedCreateCommand extends AbstractCommand
     protected function configure(): void
     {
         $this->setName('phinx:seed:create')
+            ->setAliases(['p:s:c'])
             ->setDescription('Create a new seeder')
             ->addArgument('seederName', InputArgument::REQUIRED, 'What is the name of the seeder (in CamelCase)?')
             ->setHelp(

@@ -7,30 +7,37 @@
     <services>
         <service id="umanit_phinx.command.breakpoint_command" class="Umanit\PhinxBundle\Command\BreakpointCommand">
             <tag name="console.command" command="phinx:breakpoint" />
+            <tag name="console.command" command="p:b" />
         </service>
 
         <service id="umanit_phinx.command.create_command" class="Umanit\PhinxBundle\Command\CreateCommand">
             <tag name="console.command" command="phinx:create" />
+            <tag name="console.command" command="p:c" />
         </service>
 
         <service id="umanit_phinx.command.migrate_command" class="Umanit\PhinxBundle\Command\MigrateCommand">
             <tag name="console.command" command="phinx:migrate" />
+            <tag name="console.command" command="p:m" />
         </service>
 
         <service id="umanit_phinx.command.rollback_command" class="Umanit\PhinxBundle\Command\RollbackCommand">
             <tag name="console.command" command="phinx:rollback" />
+            <tag name="console.command" command="p:r" />
         </service>
 
         <service id="umanit_phinx.command.status_command" class="Umanit\PhinxBundle\Command\StatusCommand">
             <tag name="console.command" command="phinx:status" />
+            <tag name="console.command" command="p:s" />
         </service>
 
         <service id="umanit_phinx.command.seed_run_command" class="Umanit\PhinxBundle\Command\SeedRunCommand">
             <tag name="console.command" command="phinx:seed:run" />
+            <tag name="console.command" command="p:s:r" />
         </service>
 
         <service id="umanit_phinx.command.seed_create_command" class="Umanit\PhinxBundle\Command\SeedCreateCommand">
             <tag name="console.command" command="phinx:seed:create" />
+            <tag name="console.command" command="p:s:c" />
         </service>
     </services>
 </container>
