@@ -24,5 +24,13 @@
         <service id="umanit_phinx.command.status_command" class="Umanit\PhinxBundle\Command\StatusCommand">
             <tag name="console.command" command="phinx:status" />
         </service>
+
+        <service id="umanit_phinx.command.seed_run_command" class="Umanit\PhinxBundle\Command\SeedRunCommand">
+            <tag name="console.command" command="phinx:seed:run" />
+        </service>
+
+        <service id="umanit_phinx.command.seed_create_command" class="Umanit\PhinxBundle\Command\SeedCreateCommand">
+            <tag name="console.command" command="phinx:seed:create" />
+        </service>
     </services>
 </container>
