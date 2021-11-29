@@ -156,6 +156,11 @@ EOT
         }
 
         $output->writeln('<info>using seed base class</info> ' . $classes['$useClassName']);
+        if (null !== $altTemplate && \file_exists($altTemplate)) {
+            $output->writeln('<info>using alternative template</info> ' . $altTemplate);
+        } else {
+            $output->writeln('<info>using default template</info>');
+        }
         $output->writeln('<info>created</info> .' . \str_replace(\getcwd(), '', $filePath));
 
         return self::CODE_SUCCESS;
