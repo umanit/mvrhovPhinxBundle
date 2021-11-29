@@ -39,6 +39,7 @@ class StatusCommand extends AbstractCommand
     protected function configure()
     {
         $this->setName('phinx:status')
+            ->setAliases(['p:s'])
             ->setDescription('Show migration status')
             ->addOption(
                 '--format',

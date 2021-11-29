@@ -41,6 +41,7 @@ class MigrateCommand extends AbstractCommand
     {
         $this
             ->setName('phinx:migrate')
+            ->setAliases(['p:m'])
             ->setDescription('Migrate the database')
             ->addOption(
                 '--target',

@@ -48,6 +48,7 @@ class CreateCommand extends AbstractCommand
     protected function configure()
     {
         $this->setName('phinx:create')
+            ->setAliases(['p:c'])
             ->setDescription('Create a new migration')
             ->addArgument('migrationName', InputArgument::REQUIRED, 'What is the name of the migration (in CamelCase)?')
             ->setHelp(

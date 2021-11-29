@@ -41,6 +41,7 @@ class RollbackCommand extends AbstractCommand
     {
         $this
             ->setName('phinx:rollback')
+            ->setAliases(['p:r'])
             ->setDescription('Rollback the last or to a specific migration')
             ->addOption(
                 '--target',
