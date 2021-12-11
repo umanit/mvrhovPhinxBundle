@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.3] - 2021-12-11
+
+Thanks to @GErpeldinger for all his work!
+
+### Added
+- Add `phinx:seed:create` command
+- Add `phinx:seed:run` command
+- Add aliases on all commands
+
 ## [2.0.2] - 2021-11-21
 ### Fixed
 - Resolve env placeholders when processing configuration
