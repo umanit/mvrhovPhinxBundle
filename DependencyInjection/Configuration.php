@@ -53,7 +53,7 @@ class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('migrations')->defaultValue('%kernel.project_dir%/src/Resources/db/migrations')->end()
-                        ->scalarNode('seeds')->defaultValue('%kernel.project_dir%/src/Resources/db/seeds')->end()
+                        ->variableNode('seeds')->defaultValue('%kernel.project_dir%/src/Resources/db/seeds')->end()
                     ->end()
                 ->end()
                 ->arrayNode('environment')
