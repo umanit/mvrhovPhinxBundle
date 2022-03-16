@@ -29,9 +29,16 @@ use Phinx\Console\Command\AbstractCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Question\ConfirmationQuestion;
 
 class RollbackCommand extends AbstractCommand
 {
+    /**
+     * Exit code when the command is started but interrupted before execution.
+     * @var int
+     */
+    const CODE_ABORTED = 4;
+
     use CommonTrait;
 
     /**
@@ -74,6 +81,7 @@ The <info>rollback</info> command reverts the last migration, or optionally up t
 If you have a breakpoint set, then you can rollback to target 0 and the rollbacks will stop at the breakpoint.
 <info>phinx rollback -t 0 </info>
 
+You can skip the confirmation by adding <info>--no-interaction</info>
 EOT
             )
         ;
@@ -93,8 +101,23 @@ EOT
         $this->initialize($input, $output);
 
         $version = $input->getOption('target');
-        $date    = $input->getOption('date');
-        $force   = (bool) $input->getOption('force');
+        $date = $input->getOption('date');
+        $force = (bool)$input->getOption('force');
+        $noInteraction = $input->getOption('no-interaction');
+
+        if (!$noInteraction) {
+            $options = $this->getManager()->getEnvironment('default')->getOptions();
+            $helper = $this->getHelper('question');
+
+            $message = '<info>Careful, would rollback the database <comment>%s</comment>. '
+                . 'Do you want to continue? (yes/no)</info> [<comment>no</comment>]: ';
+            $question = new ConfirmationQuestion(sprintf($message, $options['name']), false);
+            $question->setAutocompleterValues(['yes', 'no']);
+
+            if (!$helper->ask($input, $output, $question)) {
+                return self::CODE_ABORTED;
+            }
+        }
 
         // rollback the specified environment
         $start = microtime(true);
