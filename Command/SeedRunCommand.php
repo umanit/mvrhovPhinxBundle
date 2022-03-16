@@ -76,7 +76,7 @@ EOT
 
         $seeds = $input->getOption('seed');
 
-        // run the migrations
+        // run the seeders
         $start = \microtime(true);
         if (\count($seeds) > 0) {
             foreach ($seeds as $seed) {
