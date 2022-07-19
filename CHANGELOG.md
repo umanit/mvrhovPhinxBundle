@@ -7,6 +7,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [2.0.5] - 2022-07-19
+
+### Added
+
+- Allow several migrations directories
+
 ## [2.0.4] - 2022-03-22
 
 ### Added
