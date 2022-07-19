@@ -110,4 +110,6 @@ Thanks to @GErpeldinger for all his work!
 
 [2.0.4]: https://github.com/umanit/phinx-bundle/compare/2.0.3...2.0.4
 
-[Unreleased]: https://github.com/umanit/phinx-bundle/compare/2.0.4...master
+[2.0.5]: https://github.com/umanit/phinx-bundle/compare/2.0.4...2.0.5
+
+[Unreleased]: https://github.com/umanit/phinx-bundle/compare/2.0.5...master
